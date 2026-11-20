@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <title>Profile</title>
+</head>
+<body>
+    <div class="header-content">
+        <button class="nazad" onclick="location.href='./dashboard.html'"
+         style="cursor:pointer"><i class="fa-solid fa-arrow-left"></i>Nazad</button>  
+        <h1>SMARTBUS</h1>
+        <button class="odjava" onclick="location.href='./login.html'"><i class="fa-solid fa-arrow-right-from-bracket"></i> Odjava</button>
+    </div>
+    <div class="profile-header">
+        <h2 class="name">Name</h2>
+        <span class="email">Email</span>
+        <span class="uloga">Uloga</span>
+    </div>
+    <div class="profile-form">
+        <div class="licni-podaci">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>Lični podaci</h3>
+        </div>
+
+        <div class="podaci-forma">
+            <label>Ime i prezime</label>
+            <input type="text" id="input-ime" placeholder="Unesite ime">   
+            <label>Email adresa</label>
+            <input type="email" id="input-email" disabled>
+            <small>Email adresa ne može biti promenjena.</small>
+            <button class="btn-save">
+            <i class="fa-solid fa-floppy-disk"></i> Sačuvaj izmene</button>
+            <h3><i class="fa-solid fa-lock"></i>Promena lozinke</h3>
+            <input type="password" id="input-stara-lozinka" placeholder="Unesite staru lozinku">
+            <i class="fa-regular fa-eye-slash toggle-pw"></i>
+            <label>Nova lozinka</label>
+            <input type="password" id="input-nova-lozinka" placeholder="Unesite novu lozinku">
+            <i class="fa-regular fa-eye-slash toggle-pw"></i>
+            <label>Potvrda nove lozinke</label>
+            <input type="password" id="input-potvrda-lozinka" placeholder="Ponovite novu lozinku">
+            <i class="fa-regular fa-eye-slash toggle-pw"></i>
+            <button class="btn-save">
+            <i class="fa-solid fa-key"></i> Promeni lozinku</button>
+        </div>
+    </div>
+    <script type="module" src="./js/apiService.js"></script>
+    <script type="module" src="./js/profile.js"></script>
+</body>
+</html>

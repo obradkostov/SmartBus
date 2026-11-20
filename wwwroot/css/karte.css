@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: 'Mulish', sans-serif;
+    background: #f0f5fb;
+    min-height: 100vh;
+    padding: 32px 20px;
+    color: #2a3f5d;
+}
+
+.podaci {
+    font-family: 'Lexend Zetta' sans-serif;
+    font-weight: 400;
+    font-variant: small-caps;
+    font-size: larger;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin: 0 auto 24px;
+    max-width: 850px;
+    border: 2px solid #234e70;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    color: #1e3a8a;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+.nazad,
+.odjava {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.nazad:hover,
+.odjava:hover {
+    background: linear-gradient(135deg, #0056cc, #00a8e8);
+}
+
+h1 {
+    text-align: center;
+}
+
+.karte-main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 20px;
+}
+
+.karte-title {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: #234e70;
+    margin-top: 36px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dbe8f5;
+}
+
+#karte-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.karta-kartica {
+    background: white;
+    border-radius: 12px;
+    padding: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #dbe8f5;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.karta-prevoznik {
+    color: #234e70;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 24px;
+    border-bottom: 1px solid #dbe8f5;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+
+.karta-kartica p {
+    font-size: 0.88rem;
+    color: #4a5568;
+    margin: 0;
+}
+
+.status-badge {
+    align-self: flex-start;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.status-kupljena {
+    background: #dbeafe;
+    color: #1e40af;
+}
+
+.status-validirana {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-otkazana {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.nema-karata,
+.greska {
+    text-align: center;
+    color: #6b7280;
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.karta-qr {
+    display: block;
+    margin: 8px auto;
+}
+
+/* .btn-oceni {
+    margin-top: 10px;
+    background: linear-gradient(135deg, #007BFF, #00c6ff);;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+} */
+
+.btn-oceni:hover,.btn-posalji-ocenu:hover,.btn-otkazi:hover {
+    background: linear-gradient(135deg, #0056cc, #00a8e8);;
+}
+
+.ocena-forma {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 3px solid #e2e8f0;
+    gap: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ocena-label {
+    font-size: 0.85rem;
+    color: #4a5568;
+    margin: 0;
+    font-weight: bold;
+}
+
+.ocena-zvezdice {
+    display: flex;
+    gap: 4px;
+}
+
+.zvezda {
+    font-size: 29px;
+    cursor: pointer;
+    color: #d1d5db;
+    transition: color 0.15s;
+}
+
+.zvezda:hover {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    transform: scale(1.2);
+}
+
+.btn-posalji-ocenu,
+.btn-otkazi,
+.btn-oceni {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    font-weight: 600;
+}

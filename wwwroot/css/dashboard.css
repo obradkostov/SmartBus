@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: Mulish;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    color: #fff;
+    background-image:
+        linear-gradient(to right,
+            rgba(10, 30, 55, 0.82) 0%,
+            rgba(10, 30, 55, 0.55) 40%,
+            rgba(10, 30, 55, 0.70) 100%),
+        url('../images/bus-background.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.brand h1 {
+    margin: 0;
+    font-family: Lexend Zetta;
+    font-size: 28px;
+}
+
+.brand p {
+    margin: 4px 0 0;
+    color: #d4e4f2;
+}
+
+.header-actions {
+    display: flex;
+}
+
+.header-actions button {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.header-actions button:hover {
+    transform: scale(1.05);
+    background: white;
+    color: #007BFF;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-card button:hover,.search-panel button:hover {
+    background: linear-gradient(135deg, #0056cc, #00a8e8);
+}
+
+.swap-cities {
+    background: transparent;
+    border: 1px solid #c3d0e0;
+    border-radius: 50%;
+    width: 50px;
+    height: 36px;
+    font-size: 16px;
+    cursor: pointer;
+    color: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.swap-cities:hover {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+    border-color: #234e70;
+    transform: rotate(180deg);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 24px;
+    padding: 28px;
+}
+
+.profile-card {
+    grid-row: 1 / 3;
+    grid-column: 1;
+    align-self: start;
+}
+
+.search-panel {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.polasci-list {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.profile-card,
+.search-panel,
+.polasci-list {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 22px;
+}
+
+.profile-card h2,
+.search-panel h2,
+.polasci-list h2 {
+    margin-top: 0;
+    color: #234e70;
+}
+
+.profile-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-card li {
+    margin-bottom: 10px;
+}
+
+.profile-card button,
+.search-panel button,
+.polasci-card button {
+    margin-top: 14px;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.profile-card button {
+    display: block;
+    width: 100%;
+}
+.swap-cities {
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #234e70;
+}
+
+.rating-filter {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.rating-filter .fa-star .fa-regular .fa-solid {
+    text-shadow:
+        0 0 1px black, 0 0 2px rgba(0, 0, 0, 0.3);
+
+}
+
+.rating-filter .fa-star:hover {
+    transform: scale(1.1);
+    text-shadow: 0 0 1px black, 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-email {
+    font-weight: bold;
+}
+
+.user-role {
+    font-weight: bold;
+}
+
+.filters {
+    display: grid;
+    gap: 14px;
+}
+
+.filters label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #2a3f5d;
+}
+
+.filters input,
+.filters select {
+    margin-top: 6px;
+    padding: 10px 12px;
+    border: 1px solid #c3d0e0;
+    border-radius: 8px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.polasci-card {
+    background: #f7fbff;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #dbe8f5;
+}
+
+.polasci-card h3 {
+    margin-top: 0;
+}
+
+.notification-div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.bell {
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+}
+
+.notifications {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    width: 350px;
+    max-height: 400px;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* Ako je zvonce blizu levog ruba - otvori panel na desno */
+.notification-div.otvori-desno .notifications {
+    right: auto;
+    left: 0;
+}
+
+.notification {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #333;
+}
+
+.notification.izmena {
+    border-left: 5px solid #FFA500;
+}
+
+.notification.vanredna_situacija {
+    border-left: 5px solid #FF0000;
+}
+
+.hidden {
+    display: none;
+}
+
+.skener-container {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skener-video {
+    width: 100%;
+    border-radius: 8px;
+    background: #000;
+}
+
+.skener-result {
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.rezultat-uspeh {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.rezultat-greska {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.rezultat-info {
+    background: #dbeafe;
+    color: #1e40af;
+    border: 1px solid #bfdbfe;
+}
+
+.btn-stop-skener {
+    background: #6b7280;
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 240px 1fr;
+        gap: 18px;
+        padding: 20px;
+    }
+
+    .brand h1 {
+        font-size: 22px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        padding: 16px;
+        gap: 16px;
+    }
+
+    .profile-card {
+        grid-row: auto;
+        grid-column: 1;
+    }
+
+    .search-panel {
+        grid-row: auto;
+        grid-column: 1;
+    }
+
+    .polasci-list {
+        grid-row: auto;
+        grid-column: 1;
+    }
+
+    .notifications {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .dashboard-header {
+        gap: 12px;
+        padding: 16px;
+    }
+
+    .header-actions {
+        display: flex;
+        align-items: center;
+    }
+
+    .header-actions button {
+        width: 100px;
+        height: 36px;
+        font-size: 13px;
+    }
+
+    .brand h1 {
+        font-size: 20px;
+    }
+
+    .brand p {
+        font-size: 13px;
+    }
+
+    .profile-card,
+    .search-panel,
+    .polasci-list {
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .notifications {
+        width: 260px;
+        right: -60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dashboard-header{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .dashboard-grid {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .dashboard-header {
+        padding: 12px;
+    }
+
+    .brand h1 {
+        font-size: 17px;
+    }
+
+    .header-actions button {
+        width: 90px;
+        height: 34px;
+        font-size: 12px;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filters {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card button,
+    .search-panel button,
+    .polasci-card button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .swap-cities {
+        width: 40px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .notifications {
+        width: calc(100vw - 24px);
+        right: 0;
+        left: auto;
+    }
+
+    .bell {
+        font-size: 18px;
+    }
+
+    .skener-result {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .brand h1 {
+        font-size: 15px;
+    }
+
+    .profile-card,
+    .search-panel,
+    .polasci-list {
+        padding: 12px;
+    }
+
+    .filters input,
+    .filters select {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    .header-actions button {
+        width: 80px;
+        font-size: 11px;
+    }
+}

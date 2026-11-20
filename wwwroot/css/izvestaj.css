@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+    background: #f0f5fb;
+    min-height: 100vh;
+    padding: 32px 20px;
+    color: #2a3f5d;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    background-color: #fff;
+    border: 2px solid #234e70;
+    max-width: 770px;
+    margin: 0 auto 24px;
+}
+
+.header-content h1 {
+    font-size: 36px;
+    color: #1e3a8a;
+    letter-spacing: 2px;
+    font-weight: 800;
+    
+}
+
+h1 {
+    text-align: center;
+}
+
+.nazad,
+.odjava {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    
+}
+.nazad:hover,
+.odjava:hover {
+    background: linear-gradient(135deg, #0056cc, #00a8e8);
+}
+
+.report-card {
+    max-width: 760px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    padding: 36px 40px 48px;
+}
+
+.report-card>h1 {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 22px;
+    color: #234e70;
+    margin-bottom: 28px;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #dbe8f5;
+}
+
+.report-card h2 {
+    font-family: 'Lexend Zetta', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #234e70;
+    margin-top: 36px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #dbe8f5;
+}
+
+.report-card h2:first-of-type {
+    margin-top: 0;
+}
+
+.report-card>div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.report-card>div:last-child {
+    margin-bottom: 0;
+}
+
+.report-card label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2a3f5d;
+}
+
+.input-box {
+    width: 100%;
+    padding: 10px 13px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 14px;
+    color: #2a3f5d;
+    background: #f7fbff;
+    border: 1px solid #c3d0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.input-box::placeholder {
+    color: #a0b4c8;
+    font-weight: 400;
+}
+
+.input-box:focus {
+    border-color: #007BFF;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.12);
+}
+
+select.input-box {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23234e70' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+textarea.input-box {
+    resize: vertical;
+    min-height: 72px;
+    line-height: 1.55;
+}
+
+.btn-submit {
+    margin-top: 32px;
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: #fff;
+    font-family: 'Mulish', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.btn-submit:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #0056cc, #00a8e8);
+}
+
+.btn-submit:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 16px 10px;
+    }
+
+    .report-card {
+        padding: 24px 18px 36px;
+        border-radius: 10px;
+    }
+
+    .report-card>h1 {
+        font-size: 18px;
+    }
+
+    .report-card h2 {
+        font-size: 12px;
+        margin-top: 28px;
+    }
+
+    .input-box {
+        font-size: 13px;
+        padding: 9px 11px;
+    }
+}
+
+@media (max-width: 360px) {
+    .report-card {
+        padding: 16px 12px 28px;
+    }
+
+    .report-card h2 {
+        margin-top: 22px;
+    }
+}

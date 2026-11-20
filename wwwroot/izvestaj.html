@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/izvestaj.css">
+    <title>Dnevni Izveštaj Kontrolora</title>
+</head>
+
+<body>
+    <div class="header-content">
+            <button class="nazad" onclick="location.href='./dashboard.html'" style="cursor:pointer"><i
+                    class="fa-solid fa-arrow-left"></i>Nazad</button>
+            <h1>SMARTBUS</h1>
+            <button class="odjava" onclick="location.href='./login.html'"><i
+                    class="fa-solid fa-arrow-right-from-bracket"></i>Odjava</button>
+        </div>
+    <main class="report-card">
+        
+        <h2>Osnovni podaci</h2>
+        <div>
+            <label>Ime i prezime kontrolora:</label>
+            <input id="ime" class="input-box" type="text" placeholder="Ime i prezime">
+        </div>
+        <div>
+            <label>Email:</label>
+            <input id="email" class="input-box" type="email" placeholder="Email adresa">
+        </div>
+        <div>
+            <label>Datum:</label>
+            <input id="datum" class="input-box" type="date">
+        </div>
+        <div>
+            <label>Smena:</label>
+            <select id="smena" class="input-box">
+                <option value="">Izaberite smenu</option>
+                <option value="jutarnja">Jutarnja</option>
+                <option value="popodnevna">Popodnevna</option>
+                <option value="nocna">Noćna</option>
+            </select>
+        </div>
+        <div>
+            <label>Dodeljene linije / relacije:</label>
+            <input id="relacije" class="input-box" type="text" placeholder="npr. 15, 27, 41">
+        </div>
+
+        <h2>Statistika putnika</h2>
+        <div>
+            <label>Ukupan broj pregledanih karata:</label>
+            <input id="pregledaneKarte" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+            <label>Broj ispravnih karata:</label>
+            <input id="validneKarte" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+            <label>Broj neispravnih / nevažećih karata:</label>
+            <input id="nevalidneKarte" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+            <label>Broj putnika bez karte:</label>
+            <input id="putniciBezKarte" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+
+        <h2>Prekršaji i kazne</h2>
+        <div>
+            <label>Broj izdatih prekršajnih naloga:</label>
+            <input id="prekrsajniNalozi" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+            <label>Ukupan iznos naplaćenih kazni (RSD):</label>
+            <input id="iznosPlacenihKazni" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+            <label>Broj lica koja su odbila plaćanje:</label>
+            <input id="odbijenaPlacanja" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+            <label>Broj prijavljenih lica:</label>
+            <input id="prijavljenaLica" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+
+        <h2>Incidenti i napomene</h2>
+        <div>
+            <label>Broj verbalnih incidenata:</label>
+            <input id="verbalniIncidenti" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+            <label>Broj fizičkih incidenata:</label>
+            <input id="fizickiIncidenti" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+            <label>Broj poziva policiji / obezbeđenju:</label>
+            <input id="poziviPolicije" class="input-box" type="number" placeholder="0" min="0">
+        </div>
+        <div>
+            <label>Opis incidenata / vanrednih situacija:</label>
+            <textarea id="opisIncidenata" class="input-box" rows="3" placeholder="Unesite opis ukoliko je bilo incidenata..."></textarea>
+        </div>
+
+        <h2>Stanje vozila i linije</h2>
+        <div>
+            <label>Uočene nepravilnosti u vozilu:</label>
+            <textarea id="nepravilnostiNaVozilu" class="input-box" rows="3" placeholder="npr. oštećena sedišta, neispravan displej..."></textarea>
+        </div>
+
+        <h2>Tehnički podaci</h2>
+        <div>
+            <label>Greške / problemi sa sistemom:</label>
+            <textarea id="problemiSaSistemom" class="input-box" rows="2"
+                placeholder="Opišite tehničke probleme ukoliko ih je bilo..."></textarea>
+        </div>
+
+        <div>
+            <button id="sacuvaj" class="btn-submit"><i class="fa-regular fa-floppy-disk"></i>  Sacuvaj</button>
+        </div>
+
+    </main>
+
+    <script type="module" src="./js/izvestaj.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/karte.css">
+    <title>Moje Karte</title>
+</head>
+
+<body>
+    <div class="header-content">
+        <button class="nazad" onclick="location.href='./dashboard.html'" style="cursor:pointer"><i
+                class="fa-solid fa-arrow-left"></i>Nazad</button>
+        <h1>SMARTBUS</h1>
+        <button class="odjava" onclick="location.href='./login.html'"><i
+                class="fa-solid fa-arrow-right-from-bracket"></i> Odjava</button>
+    </div>
+    <main class="karte-main">
+        <h2 class="karte-title">Moje karte</h2>
+        <div id="karte-container"></div>
+    </main>
+    <script type="module" src="./js/apiService.js"></script>
+    <script type="module" src="js/karte.js"></script>
+</body>
+
+</html>

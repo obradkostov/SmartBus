@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    font-family: Mulish;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/bus-background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.container {
+    width: 340px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+#title {
+    text-align: center;
+    margin: 10px 0 20px;
+    font-size: 22px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.2s;
+}
+
+input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #0056b3, #007BFF);
+}
+
+.no-acc {
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+}
+
+.no-acc-text {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.no-acc-text:hover {
+    text-decoration: underline;
+
+}
+
+.logo {
+    font-family: Lexend Zetta;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #007BFF;
+    margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {}
+
+/* Mali tablet (do 768px) */
+@media (max-width: 768px) {}
+
+/* Mobilni (do 480px) */
+@media (max-width: 480px) {}
+
+/* Mobilni (do 440px) */
+@media (max-width: 440px) {
+    .container {
+        width: auto;
+        height: 56%;
+        border-radius: 0px;
+    }
+
+    #title {
+        text-align: center;
+        margin: 10px 0 20px;
+        font-size: 32px;
+        color: #333;
+    }
+
+    input {
+        font-size: 28px;
+        height: 60px;
+        border-radius: 15px;
+        margin: 10px 0;
+    }
+
+    button {
+        height: 60px;
+        border-radius: 15px;
+        font-size: 28px;
+    }
+
+    .no-acc {
+        font-size: 28px;
+    }
+
+    .no-acc-text {
+        font-size: 28px;
+    }
+
+    .logo {
+        font-size: 40px;
+    }
+
+}
+
+/* Mobilni (do 380px) */
+@media (max-width: 380px) {
+    .container {
+        width: auto;
+        height: 56%;
+        border-radius: 0px;
+    }
+
+    #title {
+        text-align: center;
+        margin: 10px 0 20px;
+        font-size: 30px;
+        color: #333;
+    }
+
+    input {
+        font-size: 24px;
+        height: 55px;
+        border-radius: 15px;
+        margin: 10px 0;
+    }
+
+    button {
+        height: 55px;
+        border-radius: 15px;
+        font-size: 24px;
+    }
+
+    .no-acc {
+        font-size: 22px;
+    }
+
+    .no-acc-text {
+        font-size: 22px;
+    }
+
+    .logo {
+        font-size: 38px;
+    }
+}

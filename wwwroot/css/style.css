@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: Mulish;
+}
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    pointer-events: none;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 40%;
+    max-width: 900px;
+    height: 100vh;
+    margin: 0;
+
+    border-left: 3px solid #5179FF;
+    border-radius: 0;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+.main-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.45); /* DARK overlay */
+}
+.main-container * {
+    position: relative;
+    z-index: 1;
+}
+.buttons-container{
+    display: flex;
+    gap:15px;
+}
+.subtitle {
+    font-size:28px;
+    color:white;
+    font-weight: bold;
+}
+.button-login,
+.button-register,
+.button-pregled {
+    background: linear-gradient(135deg, #007BFF, #00c6ff);
+    height: 40px;
+    width: 120px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    transform: scale(1.05);
+    background: white;
+    color: #007BFF;
+}
+.logo {
+    font-family: Lexend Zetta;
+    font-size: 48px;
+    color: #00c6ff;
+}
+
+@media (max-width: 1024px) {
+    .main-container {
+        width: 55%;
+    }
+}
+
+/* Mali tablet (do 768px) */
+@media (max-width: 768px) {
+    .main-container {
+        width: 100%;
+        height: 100vh;
+        border-left: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+
+    .logo {
+        font-size: 36px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+        text-align: center;
+    }
+}
+
+/* Mobilni (do 480px) */
+@media (max-width: 480px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .logo {
+        /* font-size: 28px; */
+        text-align: center;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        font-size: 82px;
+    }
+
+    .subtitle {
+        /* font-size: 18px; */
+        font-size: 38px;
+        text-align: center;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .buttons-container{
+        gap: 24px;
+    }
+
+    .button-login,
+    .button-register,
+    .button-pregled {
+        /* width: 180px; */
+        width: 290px;
+        height: 90px;
+        font-size: 30px;
+        border-radius: 60px;
+    }
+}
+
+/* Mobilni (do 440px) */
+@media (max-width: 440px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .logo {
+        /* font-size: 28px; */
+        text-align: center;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        font-size: 72px;
+    }
+
+    .subtitle {
+        /* font-size: 18px; */
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .button-login,
+    .button-register,
+    .button-pregled {
+        /* width: 180px; */
+        width: 270px;
+        height: 80px;
+        font-size: 25px;
+        border-radius: 45px;
+    }
+}
+
+/* Mobilni (do 380px) */
+@media (max-width: 380px) {
+    .main-container {
+        width: 100%;
+    }
+
+    .logo {
+        /* font-size: 28px; */
+        text-align: center;
+        overflow-wrap: break-word;
+        word-break: break-word;
+        font-size: 64px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        /* font-size: 18px; */
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .button-login,
+    .button-register,
+    .button-pregled {
+        /* width: 180px; */
+        width: 230px;
+        height: 60px;
+        font-size: 23px;
+        border-radius: 30px;
+    }
+}
+

@@ -1,0 +1,1 @@
+U ovom folderu se nalaze resursi za frontend deo aplikacije.

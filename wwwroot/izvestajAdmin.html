@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dnevni izvestaji</title>
+    <link rel="stylesheet" href="./css/izvestajAdmin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="header-content">
+        <button class="nazad" onclick="location.href='./dashboard.html'" style="cursor:pointer"><i
+                class="fa-solid fa-arrow-left"></i>Nazad</button>
+        <h1>SMARTBUS</h1>
+        <button class="odjava" onclick="location.href='./login.html'"><i
+                class="fa-solid fa-arrow-right-from-bracket"></i>Odjava</button>
+    </div>
+    <div class="layout">
+
+        <div class="main">
+
+            <header class="topbar">
+                <div class="topbar-left">
+                    <h1>Dnevni izveštaji</h1>
+                    <p>Pregled izveštaja svih kontrolora</p>
+                </div>
+            </header>
+
+            <div class="page-body">
+
+                <div class="summary-grid">
+                    <div class="summary-card">
+                        <div class="card-label">Izveštaji danas</div>
+                        <div class="card-value loading" id="stat-izvestaji">&nbsp;</div>
+                        <div class="card-sub" id="stat-izvestaji-sub"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-label">Pregledane karte</div>
+                        <div class="card-value loading" id="stat-karte">&nbsp;</div>
+                        <div class="card-sub" id="stat-karte-sub"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-label">Prekršajni nalozi</div>
+                        <div class="card-value loading" id="stat-nalozi">&nbsp;</div>
+                        <div class="card-sub" id="stat-nalozi-sub"></div>
+                    </div>
+                    <div class="summary-card">
+                        <div class="card-label">Naplaćene kazne</div>
+                        <div class="card-value loading" id="stat-kazne">&nbsp;</div>
+                        <div class="card-sub" id="stat-kazne-sub"></div>
+                    </div>
+                </div>
+
+                <div class="filters">
+                    <label for="filter-datum">Datum</label>
+                    <input type="date" id="filter-datum" class="input-box" />
+
+                    <div class="filter-sep"></div>
+
+                    <label for="filter-kontrolor">Kontrolor</label>
+                    <select id="filter-kontrolor" class="input-box">
+                        <option value="">Svi kontrolori</option>
+                    </select>
+
+                    <label for="filter-smena">Smena</label>
+                    <select id="filter-smena" class="input-box">
+                        <option value="">Sve smene</option>
+                        <option value="jutarnja">Jutarnja</option>
+                        <option value="popodnevna">Popodnevna</option>
+                        <option value="nocna">Noćna</option>
+                    </select>
+
+                    <div class="filters-spacer"></div>
+
+                    <button class="btn-gradient" id="btn-primeni-filtere">
+                        <svg viewBox="0 0 24 24">
+                            <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+                        </svg>
+                        Primeni
+                    </button>
+
+                    <button class="btn-outline" id="btn-resetuj-filtere"><i class="fa-solid fa-rotate"></i> Resetuj</button>
+                </div>
+
+                <div class="table-wrap">
+                    <div class="table-header">
+                        <span class="th-title">
+                            Izveštaji
+                            <span id="izvestaji-count"></span>
+                        </span>
+                    </div>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kontrolor</th>
+                                <th>Datum</th>
+                                <th>Smena</th>
+                                <th>Relacije</th>
+                                <th>Karte (v / n)</th>
+                                <th>Bez karte</th>
+                                <th>Nalozi</th>
+                                <th>Kazne</th>
+                                <th>Incidenti</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="tabela-body">
+                            <tr>
+                                <td colspan="9"
+                                    style="text-align:center; padding: 30px; color:#a0b4c8; font-weight:600;">
+                                    Učitavanje izveštaja...
+                                </td>
+                            </tr>
+                            <!-- Treba ucitati redove iz js -->
+                        </tbody>
+                    </table>
+
+                    <div id="prazno-stanje">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            <polyline points="14,2 14,8 20,8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg>
+                        <p>Nema izveštaja za izabrane filtere</p>
+                        <span>Pokušajte sa drugim datumom ili kontrolorom</span>
+                    </div>
+
+                    <div class="paginacija-bar">
+                        <span id="paginacija-info"></span>
+                        <!-- Ubaciti dugmice iz js -->
+                        <div id="paginacija"></div>
+                    </div>
+
+                    <div class="table-footer">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/izvestajAdmin.js"></script>
+</body>
+
+</html>

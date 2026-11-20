@@ -1,0 +1,1 @@
+U ovom folderu se nalaze eksterni servisi odnosno API.
