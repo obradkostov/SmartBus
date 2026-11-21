@@ -43,7 +43,7 @@ public class PolazakService : IPolazakService
         var stanicado = await Context.Stanice.FindAsync(dto.StanicaDoId);
         if (stanicado == null) throw new Exception("[PolazakService/Create] Nema krajnje stanice.");
         if (dto.Cena <= 0) throw new Exception("[PolazakService/Create] Cena nije validna.");
-        if (dto.Peron <= 0 && dto.Peron > stanicaod.BrojPerona) throw new Exception("[PolazakService/Create] Broj perona nije validan.");
+        if (dto.Peron <= 0 || dto.Peron > stanicaod.BrojPerona) throw new Exception("[PolazakService/Create] Broj perona nije validan.");
         if (dto.VremePolaska < DateTime.Now) throw new Exception("[PolazakService/Create] Datum nije validan.");
         Polazak polazak = new Polazak
         {

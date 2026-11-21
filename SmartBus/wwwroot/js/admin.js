@@ -108,7 +108,7 @@ export class Admin {
 
             const obrisiAutobusButton = Helper.DodajElement("button", ["full-row"], form, "Obrisi autobus");
             obrisiAutobusButton.onclick = async () => {
-                const status = await AutobusService.remove();
+                const status = await AutobusService.remove(autobusSelect.value);
                 await Helper.StatusNotifikacija(status, "Uspesno obrisan autobus.");
             }
         }
