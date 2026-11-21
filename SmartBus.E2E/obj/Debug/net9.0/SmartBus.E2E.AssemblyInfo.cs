@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SmartBus.E2E")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+004c01365b986d53dba8dec2cebb1c94c297eba8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8299d23dba1b2ebed6596668d882994ba095d410")]
 [assembly: System.Reflection.AssemblyProductAttribute("SmartBus.E2E")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SmartBus.E2E")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -22,7 +22,7 @@ public class SedisteService : ISedisteService
     public async Task<ResponseSedisteDto> Create(CreateSedisteDto dto)
     {
         if(dto.AutobusId == 0) throw new ArgumentException("Los id autobusa");
-        if(dto.Broj == 0) throw new ArgumentException("Los broj sedista");
+        if(dto.Broj <= 0) throw new ArgumentException("Los broj sedista");
         var autobus = await Context.Autobusi.FindAsync(dto.AutobusId);
         if(autobus == null) throw new Exception("Nije pronadjen autobus");
         var sediste = new Sediste
@@ -62,12 +62,12 @@ public class SedisteService : ISedisteService
     public async Task<ResponseSedisteDto> Update(UpdateSedisteDto dto)
     {
         if(dto.Id == 0) throw new ArgumentException("Los id sedista");
-        if(dto.NoviBroj == 0) throw new ArgumentException("Los novi broj sedista");
+        if(dto.NoviBroj <= 0) throw new ArgumentException("Los novi broj sedista");
         if(string.IsNullOrWhiteSpace(dto.NoviStatus)) throw new ArgumentException("Novi status ne sme biti prazan string");
         var sediste = await Context.Sedista.FindAsync(dto.Id);
         if(sediste == null) throw new Exception("Nema sedista");
         if(sediste.Broj != dto.NoviBroj) sediste.Broj = dto.NoviBroj;
-        if(sediste.Status!.Equals(dto.NoviStatus)) sediste.Status = dto.NoviStatus;
+        if(!sediste.Status!.Equals(dto.NoviStatus)) sediste.Status = dto.NoviStatus;
         await Context.SaveChangesAsync();
         return MapToDto(sediste);
     }
